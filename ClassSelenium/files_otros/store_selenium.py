@@ -1,6 +1,5 @@
 import time
 from types import TracebackType
-from typing import Type
 import selenium.webdriver as webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
