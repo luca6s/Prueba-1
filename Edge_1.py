@@ -1,3 +1,6 @@
+
+#! https://www.youtube.com/watch?v=Zauls_kTjYM
+#! http://demo-store.seleniumacademy.com/
 import time
 import selenium.webdriver as webdriver
 from selenium import webdriver
@@ -16,5 +19,12 @@ browser = webdriver.Edge(service=edge_service, options=edge_options)
 #*Entrar al url que se desea y agrandar hoja, mantenerlo ahí para que se pueda ver, ojo que con muy poco tiempo de sleep puede que no cargue, y tampoco es necesario el sleeep
 browser.maximize_window()
 browser.get('http://demo-store.seleniumacademy.com/')
-time.sleep(10)
 #*Ahora tienes que seguir viendo el video y tratar de apretar botones
+texto_1 = browser.find_element(By.XPATH, '//nav/ol/li/a[contains(text(), "Women")]')
+print(texto_1.text)
+
+time.sleep(15)
+
+#textos_2 = browser.find_elements(By.XPATH, '//nav/ol/li/a')
+#for i in textos_2:
+#    print(i.text)
